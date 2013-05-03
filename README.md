@@ -2,6 +2,22 @@
 
 pct's rails4 template, modified from ihower's and other resources.
 
+## NOTICE
+This repo could not be used NOW, because too many gems did not support rails4 yet.
+
+## WARNING
+This template `DISABLE` turbolinks by default. If you want to add it back, please check the following lines on your code:
+
+1. app/assets/javascripts/application.js
+
+		//= require turbolinks
+	
+2.  app/views/layouts/application.html.erb
+
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		
+
 ## Usage:
 
 #### Template for frontend only:
@@ -14,18 +30,6 @@ and the scaffold command::
 
     $ rails g scaffold post title:string content:text
     $ rake db:migrate
-
-#### Full Template (frontend and backend in one site domain):
-
-    $ rails new YourAppName -m https://raw.github.com/pct/rails4-template/master/full.rb
-
-and the scaffold command::
-
-    $ rails g scaffold backend/post title:string content:text
-    $ rake db:migrate
-
-** The bad smell is all your MVC file must use `backend` prefix **
-
 
 ## Backend Screenshots
 
@@ -63,3 +67,5 @@ and the scaffold command::
 3. http://twitter.github.com/bootstrap/
 4. https://github.com/plataformatec/devise
 5. https://github.com/ernie/ransack
+6. http://net.tutsplus.com/tutorials/ruby/digging-into-rails-4/
+7. http://edgeguides.rubyonrails.org/4_0_release_notes.html

@@ -8,6 +8,17 @@ run "rm -f public/index.html"
 run "rm -f public/images/rails.png"
 run "cp config/database.yml config/database.yml.example"
 
+# 聽說 turbolinks 還有問題，所以先取消
+file_name = 'Gemfile'
+tmp = File.read(file_name)
+ret = tmp.gsub(/gem 'turbolinks'/, "# gem 'turbolinks'")
+File.open(file_name, 'w') {|file| file.puts ret}
+
+file_name = 'app/assets/javascripts/application.js'
+tmp = File.read(file_name)
+ret = tmp.gsub(/= require turbolinks/, " require turbolinks")
+File.open(file_name, 'w') {|file| file.puts ret}
+
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
 gem "kaminari"
