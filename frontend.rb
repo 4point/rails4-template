@@ -4,8 +4,6 @@
 # clean file
 run "rm README.rdoc"
 run "rm -f public/favicon.ico"
-run "rm -f public/index.html"
-run "rm -f public/images/rails.png"
 run "cp config/database.yml config/database.yml.example"
 
 # 聽說 turbolinks 還有問題，所以先取消
@@ -42,11 +40,11 @@ run 'rails g controller welcome index'
 # 改 route.rb 啟用 welcome/index
 file_name = 'config/routes.rb'
 tmp = File.read(file_name)
-ret = tmp.gsub(/# root :to => 'welcome#index'/, "root :to => 'welcome#index'")
+ret = tmp.gsub(/# root to: 'welcome#index'/, "root to: 'welcome#index'")
 File.open(file_name, 'w') {|file| file.puts ret}
 
 # 改 layout
-run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/application.html.erb'
+run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/frontend/application.html.erb'
 
 # apply css
 append_file 'app/assets/stylesheets/application.css', <<-CODE
