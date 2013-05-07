@@ -5,6 +5,16 @@ pct's rails4 template, modified from ihower's and other resources.
 ## NOTICE
 This repo could not be used NOW, because too many gems did not support rails4 yet.
 
+## CURRENT USAGE
+
+could not use `rails g scaffold` yet, please use:
+
+    $ rails g scaffold_controller post title:string content:text
+    $ rails g model post title:string content:text
+
+add 'resources :posts' to config/routes.rb 
+
+
 ## WARNING
 This template `DISABLE` turbolinks by default. If you want to add it back, please check the following lines on your code:
 
