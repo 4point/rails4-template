@@ -7,12 +7,12 @@ run "cp config/database.yml config/database.yml.example"
 
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
-gem "devise", :git => 'git://github.com/plataformatec/devise.git'
+gem 'devise', :github => 'plataformatec/devise', :branch => 'rails4'
 gem "kaminari"
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-# gem "ransack" #TODO: wait for support Rails4
+gem "ransack", :github => 'ernie/ransack', :branch => 'rails-4'
 CODE
 
 # bundle install
