@@ -3,8 +3,6 @@
 
 # clean file
 run "rm README.rdoc"
-run "rm -f public/index.html"
-run "rm -f public/images/rails.png"
 run "cp config/database.yml config/database.yml.example"
 
 # add to Gemfile
@@ -38,16 +36,16 @@ run 'rake db:seed'
 run 'rails g controller welcome index'
 
 # add auth to default app controller
-run 'cd app/controllers/; wget -N https://raw.github.com/pct/rails4-template/master/replace/application_controller.rb'
+run 'cd app/controllers/; wget -N https://raw.github.com/pct/rails4-template/master/replace/backend/application_controller.rb'
 
 # use different layout for devise
-run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/devise_layout.html.erb'
-run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/application.html.erb'
+run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/backend/devise_layout.html.erb'
+run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/backend/application.html.erb'
 
 # 改 route.rb 啟用 welcome/index
 file_name = 'config/routes.rb'
 tmp = File.read(file_name)
-ret = tmp.gsub(/# root :to => 'welcome#index'/, "root :to => 'welcome#index'")
+ret = tmp.gsub(/# root to: 'welcome#index'/, "root to: 'welcome#index'")
 File.open(file_name, 'w') {|file| file.puts ret}
 
 # kaminari per page 10
