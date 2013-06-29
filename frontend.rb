@@ -40,7 +40,7 @@ run 'rails g controller welcome index'
 # 改 route.rb 啟用 welcome/index
 file_name = 'config/routes.rb'
 tmp = File.read(file_name)
-ret = tmp.gsub(/# root to: 'welcome#index'/, "root to: 'welcome#index'")
+ret = tmp.gsub(/# root 'welcome#index'/, "root 'welcome#index'")
 File.open(file_name, 'w') {|file| file.puts ret}
 
 # 改 layout

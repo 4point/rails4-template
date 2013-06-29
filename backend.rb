@@ -45,7 +45,7 @@ run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/m
 # 改 route.rb 啟用 welcome/index
 file_name = 'config/routes.rb'
 tmp = File.read(file_name)
-ret = tmp.gsub(/# root to: 'welcome#index'/, "root to: 'welcome#index'")
+ret = tmp.gsub(/# root 'welcome#index'/, "root 'welcome#index'")
 File.open(file_name, 'w') {|file| file.puts ret}
 
 # kaminari per page 10
