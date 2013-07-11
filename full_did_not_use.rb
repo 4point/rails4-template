@@ -38,7 +38,7 @@ run 'rake db:seed'
 run 'rails g controller welcome index'
 
 # default application controller
-run 'cd app/controllers; wget -N https://raw.github.com/pct/rails4-template/master/replace/application_controller.rb'
+run 'cd app/controllers; wget -N https://raw.github.com/4point/rails4-template/master/replace/application_controller.rb'
 file_name = 'app/controllers/application_controller.rb'
 tmp = File.read(file_name)
 ret = tmp.gsub(/before_filter :authenticate_admin!/, "\b")
@@ -50,7 +50,7 @@ run 'rails g controller backend/welcome index'
 
 
 # add auth to backend app controller
-run 'cd app/controllers/backend; wget -N https://raw.github.com/pct/rails4-template/master/replace/application_controller.rb'
+run 'cd app/controllers/backend; wget -N https://raw.github.com/4point/rails4-template/master/replace/application_controller.rb'
 file_name = 'app/controllers/backend/application_controller.rb'
 tmp = File.read(file_name)
 ret = tmp.gsub(/class ApplicationController/, "class Backend::ApplicationController")
@@ -65,8 +65,8 @@ ret = ret.gsub(/"application"/, '"backend"')
 File.open(file_name, 'w') {|file| file.puts ret}
 
 # use different layout for devise
-run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/devise_layout.html.erb'
-run 'cd app/views/layouts/; wget -O backend.html.erb https://raw.github.com/pct/rails4-template/master/replace/application.html.erb'
+run 'cd app/views/layouts/; wget -N https://raw.github.com/4point/rails4-template/master/replace/devise_layout.html.erb'
+run 'cd app/views/layouts/; wget -O backend.html.erb https://raw.github.com/4point/rails4-template/master/replace/application.html.erb'
 
 # 改 route.rb 啟用 welcome/index
 file_name = 'config/routes.rb'
@@ -161,15 +161,15 @@ CODE
 
 # fetch scaffold template
 run 'mkdir -p lib/templates/erb/scaffold'
-run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/pct/rails4-template/master/lib/templates/erb/scaffold/_form.html.erb'
-run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/pct/rails4-template/master/lib/templates/erb/scaffold/edit.html.erb'
-run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/pct/rails4-template/master/lib/templates/erb/scaffold/new.html.erb'
-run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/pct/rails4-template/master/lib/templates/erb/scaffold/index.html.erb'
-run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/pct/rails4-template/master/lib/templates/erb/scaffold/show.html.erb'
+run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/4point/rails4-template/master/lib/templates/erb/scaffold/_form.html.erb'
+run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/4point/rails4-template/master/lib/templates/erb/scaffold/edit.html.erb'
+run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/4point/rails4-template/master/lib/templates/erb/scaffold/new.html.erb'
+run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/4point/rails4-template/master/lib/templates/erb/scaffold/index.html.erb'
+run 'cd lib/templates/erb/scaffold; wget -N https://raw.github.com/4point/rails4-template/master/lib/templates/erb/scaffold/show.html.erb'
 
 # fetch and modify scaffold controller with kaminari
 run 'mkdir -p lib/templates/rails/scaffold_controller'
-run 'cd lib/templates/rails/scaffold_controller; wget -N https://raw.github.com/pct/rails4-template/master/lib/templates/rails/scaffold_controller/controller.rb'
+run 'cd lib/templates/rails/scaffold_controller; wget -N https://raw.github.com/4point/rails4-template/master/lib/templates/rails/scaffold_controller/controller.rb'
 
 file_name = 'lib/templates/rails/scaffold_controller/controller.rb'
 tmp = File.read(file_name)
@@ -178,13 +178,13 @@ File.open(file_name, 'w') {|file| file.puts ret}
 
 # fetch kaminari views
 run 'mkdir -p app/views/kaminari'
-run 'cd app/views/kaminari; wget -N https://raw.github.com/pct/rails4-template/master/replace/kaminari/_first_page.html.erb'
-run 'cd app/views/kaminari; wget -N https://raw.github.com/pct/rails4-template/master/replace/kaminari/_gap.html.erb'
-run 'cd app/views/kaminari; wget -N https://raw.github.com/pct/rails4-template/master/replace/kaminari/_last_page.html.erb'
-run 'cd app/views/kaminari; wget -N https://raw.github.com/pct/rails4-template/master/replace/kaminari/_next_page.html.erb'
-run 'cd app/views/kaminari; wget -N https://raw.github.com/pct/rails4-template/master/replace/kaminari/_page.html.erb'
-run 'cd app/views/kaminari; wget -N https://raw.github.com/pct/rails4-template/master/replace/kaminari/_paginator.html.erb'
-run 'cd app/views/kaminari; wget -N https://raw.github.com/pct/rails4-template/master/replace/kaminari/_prev_page.html.erb'
+run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_first_page.html.erb'
+run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_gap.html.erb'
+run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_last_page.html.erb'
+run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_next_page.html.erb'
+run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_page.html.erb'
+run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_paginator.html.erb'
+run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_prev_page.html.erb'
 
 # git ignore
 append_file '.gitignore', <<-CODE

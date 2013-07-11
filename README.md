@@ -1,6 +1,6 @@
 # Rails4 Template
 
-pct's rails4 template, modified from ihower's and other resources.
+4point's rails4 template, modified from ihower's and other resources.
 
 ## NOTICE
 This repo could not be used NOW, because too many gems did not support rails4 yet.
@@ -31,10 +31,10 @@ This template `DISABLE` turbolinks by default. If you want to add it back, pleas
 ## Usage:
 
 #### Template for frontend only:
-    $ rails new YourAppName -m https://raw.github.com/pct/rails4-template/master/frontend.rb
+    $ rails new YourAppName -m https://raw.github.com/4point/rails4-template/master/frontend.rb
 
 #### Template for backend only:
-    $ rails new YourAppName -m https://raw.github.com/pct/rails4-template/master/backend.rb
+    $ rails new YourAppName -m https://raw.github.com/4point/rails4-template/master/backend.rb
     
 and the scaffold command::
 
@@ -43,25 +43,25 @@ and the scaffold command::
 
 ## Backend Screenshots
 
-(rails new MyBlog -m https://raw.github.com/pct/rails4-template/master/full.rb)
+(rails new MyBlog -m https://raw.github.com/4point/rails4-template/master/full.rb)
 
 #### frontend: /
-![frontend](https://raw.github.com/pct/rails4-template/master/screenshots/frontend.png)
+![frontend](https://raw.github.com/4point/rails4-template/master/screenshots/frontend.png)
 
 #### login page: /admins/sign_in 
-![login](https://raw.github.com/pct/rails4-template/master/screenshots/login.png)
+![login](https://raw.github.com/4point/rails4-template/master/screenshots/login.png)
 
 #### backend page: /backend
-![backend](https://raw.github.com/pct/rails4-template/master/screenshots/login_success.png)
+![backend](https://raw.github.com/4point/rails4-template/master/screenshots/login_success.png)
 
 #### scaffold list: /backend/posts
-![list](https://raw.github.com/pct/rails4-template/master/screenshots/list.png)
+![list](https://raw.github.com/4point/rails4-template/master/screenshots/list.png)
 
 #### search results:
-![search result](https://raw.github.com/pct/rails4-template/master/screenshots/filter.png)
+![search result](https://raw.github.com/4point/rails4-template/master/screenshots/filter.png)
 
 #### scaffold view: /backend/posts/1
-![view](https://raw.github.com/pct/rails4-template/master/screenshots/view.png)
+![view](https://raw.github.com/4point/rails4-template/master/screenshots/view.png)
 
 
 ## TODO:

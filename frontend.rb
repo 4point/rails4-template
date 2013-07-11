@@ -44,7 +44,7 @@ ret = tmp.gsub(/# root 'welcome#index'/, "root 'welcome#index'")
 File.open(file_name, 'w') {|file| file.puts ret}
 
 # 改 layout
-run 'cd app/views/layouts/; wget -N https://raw.github.com/pct/rails4-template/master/replace/frontend/application.html.erb'
+run 'cd app/views/layouts/; wget -N https://raw.github.com/4point/rails4-template/master/replace/frontend/application.html.erb'
 
 # apply css
 append_file 'app/assets/stylesheets/application.css', <<-CODE
