@@ -150,16 +150,16 @@ run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-templat
 run 'cd app/views/kaminari; wget -N https://raw.github.com/4point/rails4-template/master/replace/kaminari/_prev_page.html.erb'
 
 # fetch zh-TW locales
-run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/config/locales/carrierwave.zh-TW.yml'
-run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/config/locales/devise.zh-TW.yml'
-run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/config/locales/form.zh-TW.yml'
-run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/config/locales/kaminari.zh-TW.yml'
-run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/config/locales/rails.zh-TW.yml'
-run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/config/locales/zh-TW.yml'
+run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/config/locales/carrierwave.zh-TW.yml'
+run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/config/locales/devise.zh-TW.yml'
+run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/config/locales/form.zh-TW.yml'
+run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/config/locales/kaminari.zh-TW.yml'
+run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/config/locales/rails.zh-TW.yml'
+run 'cd config/locales; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/config/locales/zh-TW.yml'
 
 # fetch css
-run 'cd app/assets/stylesheets; wget -N https://raw.github.com/4point/rails4-template/master/replace/app/assets/stylesheets/z_admin.css'
-run 'cd app/assets/stylesheets; wget -N https://raw.github.com/4point/rails4-template/master/replace/app/assets/stylesheets/z_admin_responsive.css'
+run 'cd app/assets/stylesheets; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/app/assets/stylesheets/z_admin.css'
+run 'cd app/assets/stylesheets; wget -N https://raw.github.com/4point/rails4-template/master/replace/backend/app/assets/stylesheets/z_admin_responsive.css'
 
 # git ignore
 append_file '.gitignore', <<-CODE
