@@ -26,6 +26,7 @@ gem "twitter-bootstrap-rails"
 gem "google-analytics-rails"
 group :development do
   gem 'guard-livereload', require: false
+  gem 'guard-rails', require: false
 end
 CODE
 
