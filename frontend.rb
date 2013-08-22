@@ -21,8 +21,6 @@ File.open(file_name, 'w') {|file| file.puts ret}
 append_file 'Gemfile', <<-CODE
 gem "kaminari"
 gem "therubyracer"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
 gem "google-analytics-rails"
 group :development do
   gem 'guard-livereload', require: false
@@ -32,8 +30,6 @@ CODE
 
 # bundle install
 run 'bundle install'
-run 'rails g bootstrap:install'
-run 'rails g bootstrap:layout application fixed -f'
 
 # default controller
 run 'rails g controller welcome index'
