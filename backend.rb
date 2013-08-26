@@ -13,6 +13,9 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "ransack", :github => 'ernie/ransack', :branch => 'rails-4'
+gem 'carrierwave'
+gem 'mysql2'
+gem 'ckeditor_rails'
 CODE
 
 # bundle install
