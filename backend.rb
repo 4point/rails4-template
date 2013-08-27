@@ -7,12 +7,12 @@ run "cp config/database.yml config/database.yml.example"
 
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
-gem 'devise', :github => 'plataformatec/devise', :branch => 'rails4'
+gem 'devise'
 gem "kaminari"
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
-gem "ransack", :github => 'ernie/ransack', :branch => 'rails-4'
+gem "ransack"
 gem 'carrierwave'
 gem 'mysql2'
 gem 'ckeditor_rails'
