@@ -19,9 +19,10 @@ File.open(file_name, 'w') {|file| file.puts ret}
 
 # add to Gemfile
 append_file 'Gemfile', <<-CODE
-gem "kaminari"
-gem "therubyracer"
-gem "google-analytics-rails"
+gem 'kaminari'
+gem 'therubyracer'
+gem 'simple_form'
+gem 'google-analytics-rails'
 group :development do
   gem 'guard-livereload', require: false
   gem 'guard-rails', require: false
