@@ -1,15 +1,15 @@
 <div class="page-header">
-  <h1>Listing <%= plural_table_name %></h1>
+  <h1><%= plural_table_name %>列表</h1>
 </div>
 
 <div>
   <div class="pull-left">
-    <%%= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path, :class => 'btn btn-primary' %>
+    <%%= link_to '新增<%= table_name %>', new_<%= singular_table_name %>_path, :class => 'btn btn-primary' %>
   </div>
   <div class="pull-right">
     <%%= <%= 'search_form_for @search do |f|' %> %>
       <%%= <%= 'f.text_field :"#{@search_key}", :style => "margin-top:10px;"' %> %>
-      <%%= <%= 'f.submit "Search", :class => "btn"' %> %>
+      <%%= <%= 'f.submit "搜尋", :class => "btn"' %> %>
     <%% <%= 'end' %> %>
   </div>
 </div>
@@ -19,9 +19,9 @@
     <tr>
       <th><i class="icon-list"></i></th>
       <% attributes.each do |attribute| -%>
-        <th><i class="icon-tag"></i> <%= attribute.human_name %></th>
+        <th><i class="icon-tag"></i> <%%= t('<%= singular_table_name %>.<%= attribute.name %>') %></th>
       <% end -%>
-      <th><i class="icon-cog"></i> Actions</th>
+      <th><i class="icon-cog"></i> 操作</th>
     </tr>
   </thead>
   <tbody>
@@ -33,9 +33,9 @@
       <% end -%>
       <td>
         <div class="btn-group">
-        <%%= link_to 'Show', <%= singular_table_name %>, :class => 'btn btn-mini' %>
-        <%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-mini' %>
-        <%%= link_to 'Destroy', <%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %>
+        <%%= link_to '查看', <%= singular_table_name %>, :class => 'btn btn-mini' %>
+        <%%= link_to '編輯', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'btn btn-mini' %>
+        <%%= link_to '刪除', <%= singular_table_name %>, method: :delete, data: { confirm: '確定刪除？' }, :class => 'btn btn-mini btn-danger' %>
         </div>
     </td>
     </tr>

@@ -1,3 +1,4 @@
+# coding: utf-8
 <% if namespaced? -%>
 require_dependency "<%= namespaced_file_path %>/application_controller"
 
@@ -31,7 +32,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{singular_table_name}_params") %>
 
     if @<%= orm_instance.save %>
-      redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully created.'" %>
+      redirect_to @<%= singular_table_name %>, notice: t('<%= singular_table_name %>.<%= name %>') + '新增成功！'
     else
       render action: 'new'
     end
@@ -40,7 +41,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   # PATCH/PUT <%= route_url %>/1
   def update
     if @<%= orm_instance.update("#{singular_table_name}_params") %>
-      redirect_to @<%= singular_table_name %>, notice: <%= "'#{human_name} was successfully updated.'" %>
+      redirect_to @<%= singular_table_name %>, notice: t('<%= singular_table_name %>.<%= name %>') + '更新成功！'
     else
       render action: 'edit'
     end
@@ -49,7 +50,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   # DELETE <%= route_url %>/1
   def destroy
     @<%= orm_instance.destroy %>
-    redirect_to <%= index_helper %>_url, notice: <%= "'#{human_name} was successfully destroyed.'" %>
+    redirect_to <%= index_helper %>_url, notice: t('<%= singular_table_name %>.<%= name %>') + '刪除成功！'
   end
 
   private

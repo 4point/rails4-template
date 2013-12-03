@@ -13,15 +13,14 @@
 
 <% attributes.each do |attribute| -%>
   <div class="control-group">
-    <%%= f.label :<%= attribute.name %>, :class => 'control-label' %>
+  <%%= f.label :<%= attribute.name %>, t('<%= singular_table_name %>.<%= attribute.name %>'),:class => 'control-label' %>
     <div class="controls">
       <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :class => '<%= attribute.field_type %> span5' %>
     </div>
   </div>
 <% end -%>
   <div class="form-actions">
-    <%%= f.submit nil, :class => 'btn btn-primary' %>
-    <%%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                <%= index_helper %>_path, :class => 'btn' %>
+    <%%= f.submit "確定", :class => 'btn btn-primary' %>
+    <%%= link_to "取消", <%= index_helper %>_path, :class => 'btn' %>
   </div>
 <%% end %>
