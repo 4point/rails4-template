@@ -1,10 +1,10 @@
 <div class="page-header">
-  <h1><%= plural_table_name %>列表</h1>
+  <h1><%%= t('<%= singular_table_name %>.<%= name %>') %>列表</h1>
 </div>
 
 <div>
   <div class="pull-left">
-    <%%= link_to '新增<%= table_name %>', new_<%= singular_table_name %>_path, :class => 'btn btn-primary' %>
+    <%%= link_to "新增" + t('<%= singular_table_name %>.<%= name %>'), new_<%= singular_table_name %>_path, :class => 'btn btn-primary' %>
   </div>
   <div class="pull-right">
     <%%= <%= 'search_form_for @search do |f|' %> %>
