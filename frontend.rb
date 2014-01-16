@@ -42,6 +42,9 @@ tmp = File.read(file_name)
 ret = tmp.gsub(/# root 'welcome#index'/, "root 'welcome#index'")
 File.open(file_name, 'w') {|file| file.puts ret}
 
+# 增加 helper
+run 'cd app/helpers/; wget -N https://raw.github.com/4point/rails4-template/master/replace/frontend/application_helper.rb'
+
 # 改 layout
 run 'cd app/views/layouts/; wget -N https://raw.github.com/4point/rails4-template/master/replace/frontend/application.html.erb'
 
